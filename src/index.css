@@ -1,0 +1,177 @@
+*{
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root{
+  --primary: #1c9a55;
+}
+
+body{
+  background-color: #000;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+  color: #fff;
+  display: flex;
+  width: 100%;
+}
+
+
+
+/* ---- Join Room -------------------------------------------------------- */
+
+.joinRoom{
+  background-color: #242424;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 2rem 0;
+  display: flex;
+  width: 350px;
+  gap: 1rem;
+}
+
+
+/* Inputs */
+
+.joinRoom .inputArea input:focus{ outline: 2px solid #ccc; }
+
+.joinRoom .inputArea input:focus + label,
+.joinRoom .inputArea input:not(:placeholder-shown) + label {
+  transform: translate(.5rem, -20px);
+  font-size: 12px;
+}
+
+.joinRoom .inputArea input{
+  border: 1px solid #fff;
+  transition: ease .3s;
+  border-radius: 5px;
+  background: none;
+  padding: 0 1rem;
+  color: white;
+  outline: none;
+  height: 40px;
+  width: 100%;
+}
+
+.joinRoom .inputArea label{
+  transform: translate(1.2rem, 0);
+  background-color: #242424;
+  transition: ease .3s;
+  position: absolute;
+  padding: 0 .5rem;
+}
+
+.joinRoom .inputArea{
+  align-items: center;
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 40px;
+}
+
+
+/* Button */
+
+.joinRoom button{
+  outline: 2px solid #ccc;
+  outline-style: dashed;
+  border-radius: 5px;
+  background: none;
+  cursor: pointer;
+  color: #ccc;
+  width: 300px;
+  height: 40px;
+  border: none;
+}
+
+
+
+/* ---- Chat Room -------------------------------------------------------- */
+
+.roomArea{
+  background-color: #242424;
+  border-radius: 1rem;
+  min-width: 370px;
+  padding: 1rem;
+  height: 70vh;
+  width: 70vw;
+}
+
+
+/* Messages section */
+
+.messagesArea::-webkit-scrollbar { display: none; }
+
+.roomArea .messagesArea .message{
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 1rem;
+  width: 90%;
+}
+
+.roomArea .messagesArea .sender{
+  background-color: #414141;
+  align-self: flex-end;
+}
+
+.roomArea .messagesArea .system{
+  background-color: #1e1e1e;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1rem;
+  align-self: center;
+  padding: .5rem 0;
+  display: flex;
+  width: 50%;
+  gap: .3rem;
+}
+
+.roomArea .messagesArea{
+  height: calc(100% - 40px - 2rem);
+  -ms-overflow-style: none; 
+  flex-direction: column;
+  scrollbar-width: none;
+  padding-bottom: 1rem;
+  overflow-y: auto;
+  display: flex;
+  gap: 1rem;
+}
+
+
+/* Send message section */
+
+.roomArea .sendMessage input:focus{ outline: 2px solid #ccc; }
+
+.roomArea .sendMessage input{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background: none;
+  padding: 0 1rem;
+  color: white;
+  outline: none;
+  height: 40px;
+  width: 100%;
+}
+
+.roomArea .sendMessage button{
+  background-color: var(--primary);
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 0 1rem;
+  color: white;
+  outline: none;
+  border: none;
+}
+
+.roomArea .sendMessage{
+  background-color: #242424;
+  padding-top: 1rem;
+  display: flex;
+  width: 100%;
+  gap:  1rem;
+}
